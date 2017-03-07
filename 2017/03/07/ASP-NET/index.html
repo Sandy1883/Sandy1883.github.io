@@ -90,7 +90,9 @@
 <meta name="description" content="ASP.NETPage.IsPostBack属性
 作用：IsPostBack属性用于检测页面是否已经回传给服务器端。对于每次页面加载是都需要被初始化的控件，可以将其代码放在IsPostBack中，对于只需要加载一次的控件，可以将其代码放（！IsPostBack）中。
 小栗子：
-123456789101112131415161718192021222324252627 protected void">
+
+protected void Page_Load(object sender, EventArgs e)
+   {">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ASP.NET">
 <meta property="og:url" content="/2017/03/07/ASP-NET/index.html">
@@ -98,14 +100,18 @@
 <meta property="og:description" content="ASP.NETPage.IsPostBack属性
 作用：IsPostBack属性用于检测页面是否已经回传给服务器端。对于每次页面加载是都需要被初始化的控件，可以将其代码放在IsPostBack中，对于只需要加载一次的控件，可以将其代码放（！IsPostBack）中。
 小栗子：
-123456789101112131415161718192021222324252627 protected void">
-<meta property="og:updated_time" content="2017-03-07T14:47:32.701Z">
+
+protected void Page_Load(object sender, EventArgs e)
+   {">
+<meta property="og:updated_time" content="2017-03-07T15:01:15.206Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ASP.NET">
 <meta name="twitter:description" content="ASP.NETPage.IsPostBack属性
 作用：IsPostBack属性用于检测页面是否已经回传给服务器端。对于每次页面加载是都需要被初始化的控件，可以将其代码放在IsPostBack中，对于只需要加载一次的控件，可以将其代码放（！IsPostBack）中。
 小栗子：
-123456789101112131415161718192021222324252627 protected void">
+
+protected void Page_Load(object sender, EventArgs e)
+   {">
 
 
 
@@ -389,8 +395,35 @@
 <h3 id="ASP-NET"><a href="#ASP-NET" class="headerlink" title="ASP.NET"></a>ASP.NET</h3><p>Page.IsPostBack属性</p>
 <p>作用：IsPostBack属性用于检测页面是否已经回传给服务器端。<br>对于每次页面加载是都需要被初始化的控件，可以将其代码放在IsPostBack中，对于只需要加载一次的控件，可以将其代码放（！IsPostBack）中。</p>
 <p><strong><em>小栗子：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"> protected <span class="keyword">void</span> Page_Load(object sender, EventArgs e)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span> (!Page.IsPostBack) &#123;</div><div class="line">            <span class="comment">//创建items集合</span></div><div class="line">            ArrayList items = <span class="keyword">new</span> ArrayList();<span class="comment">//如果不引用using System.Collections;会报错</span></div><div class="line">            items.Add(<span class="string">"苹果"</span>);</div><div class="line">            items.Add(<span class="string">"香蕉"</span>);</div><div class="line">            <span class="comment">//绑定到DropDownList，数据绑定，这两个语句不可缺一</span></div><div class="line">            DropDownList1.DataSource = items;</div><div class="line">            DropDownList1.DataBind();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"><span class="string">``</span><span class="string">` </span></div><div class="line"> &lt;form id="form1" runat="server"&gt;</div><div class="line">        </div><div class="line">    &lt;div&gt;</div><div class="line">    &lt;asp:DropDownList ID="DropDownList1" runat="server"&gt;</div><div class="line">        &lt;/asp:DropDownList&gt;</div><div class="line">        &lt;asp:Button ID="Button1" runat="server" Text="Button" /&gt;</div><div class="line">    </div><div class="line">    &lt;/div&gt;</div><div class="line">        &lt;asp:Label ID="Label1" runat="server" Text="Label"&gt;&lt;/asp:Label&gt;</div><div class="line">    &lt;/form&gt;</div><div class="line"></div><div class="line"></div><div class="line">在该控件属性中的AutoPostBack=true为自动回复；</div></pre></td></tr></table></figure>
-<p> <asp:dropdownlist id="DropDownList1" runat="server"><br>        </asp:dropdownlist><br>``` </p>
+<pre><code class="javascript">
+protected <span class="keyword">void</span> Page_Load(object sender, EventArgs e)
+   {
+       <span class="keyword">if</span> (!Page.IsPostBack) {
+           <span class="comment">//创建items集合</span>
+           ArrayList items = <span class="keyword">new</span> ArrayList();<span class="comment">//如果不引用using System.Collections;会报错</span>
+           items.Add(<span class="string">"苹果"</span>);
+           items.Add(<span class="string">"香蕉"</span>);
+           <span class="comment">//绑定到DropDownList，数据绑定，这两个语句不可缺一</span>
+           DropDownList1.DataSource = items;
+           DropDownList1.DataBind();
+       }
+   }
+</code></pre>
+<pre><code class="javascript">
+&lt;form id=<span class="string">"form1"</span> runat=<span class="string">"server"</span>&gt;
+        &lt;div&gt;
+   &lt;asp:DropDownList ID="DropDownList1" runat="server"&gt;
+       &lt;/asp:DropDownList&gt;
+       &lt;asp:Button ID="Button1" runat="server" Text="Button" /&gt;
+   &lt;/div&gt;
+       &lt;asp:Label ID="Label1" runat="server" Text="Label"&gt;&lt;/asp:Label&gt;
+   &lt;/form&gt;
+</code></pre>
+<p>在该控件属性中的AutoPostBack=true为自动回复；</p>
+<pre><code class="javascript">
+&lt;asp:DropDownList ID=<span class="string">"DropDownList1"</span> runat=<span class="string">"server"</span>&gt;
+       &lt;/asp:DropDownList&gt;
+</code></pre>
 
       
     </div>
