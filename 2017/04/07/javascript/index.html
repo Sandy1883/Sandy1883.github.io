@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Sandy" />
+  <meta name="keywords" content="-"canvas"," />
 
 
 
@@ -87,12 +87,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sandy Blog">
-<meta property="og:url" content="/index.html">
+<meta name="description" content="关于如何运用canvas进行局部事件绑定嘿嘿，脑子有坑的我突然想起用canvas画个导航栏，然后进行局部位置进行事件点击，然而过程略带难度，因此记录下啦。好哒，废话不多说直接上图！第一步，我要画圆和矩形嘛，肯定有个画布啦：123&amp;lt;canvas id=&amp;apos;draw&amp;apos; width=&amp;quot;1000px&amp;quot; height=&amp;apos;900px&amp;apos;   &amp;g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript">
+<meta property="og:url" content="/2017/04/07/javascript/index.html">
 <meta property="og:site_name" content="Sandy Blog">
+<meta property="og:description" content="关于如何运用canvas进行局部事件绑定嘿嘿，脑子有坑的我突然想起用canvas画个导航栏，然后进行局部位置进行事件点击，然而过程略带难度，因此记录下啦。好哒，废话不多说直接上图！第一步，我要画圆和矩形嘛，肯定有个画布啦：123&amp;lt;canvas id=&amp;apos;draw&amp;apos; width=&amp;quot;1000px&amp;quot; height=&amp;apos;900px&amp;apos;   &amp;g">
+<meta property="og:image" content="/./1491498996504.png">
+<meta property="og:updated_time" content="2017-04-06T17:30:23.225Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sandy Blog">
+<meta name="twitter:title" content="javascript">
+<meta name="twitter:description" content="关于如何运用canvas进行局部事件绑定嘿嘿，脑子有坑的我突然想起用canvas画个导航栏，然后进行局部位置进行事件点击，然而过程略带难度，因此记录下啦。好哒，废话不多说直接上图！第一步，我要画圆和矩形嘛，肯定有个画布啦：123&amp;lt;canvas id=&amp;apos;draw&amp;apos; width=&amp;quot;1000px&amp;quot; height=&amp;apos;900px&amp;apos;   &amp;g">
+<meta name="twitter:image" content="/./1491498996504.png">
 
 
 
@@ -120,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="/"/>
+  <link rel="canonical" href="/2017/04/07/javascript/"/>
 
 
 
 
 
-  <title> Sandy Blog </title>
+  <title> javascript | Sandy Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -151,9 +157,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -256,9 +260,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -291,10 +295,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/04/07/javascript/" itemprop="url">
-                  javascript
-                </a>
+                javascript
               
             
           </h1>
@@ -355,9 +356,7 @@
       
 
       
-        
-          
-            <a id="more"></a>
+        <a id="more"></a>
 <h2 id="关于如何运用canvas进行局部事件绑定"><a href="#关于如何运用canvas进行局部事件绑定" class="headerlink" title="关于如何运用canvas进行局部事件绑定"></a>关于如何运用canvas进行局部事件绑定</h2><h5 id="嘿嘿，脑子有坑的我突然想起用canvas画个导航栏，然后进行局部位置进行事件点击，然而过程略带难度，因此记录下啦。好哒，废话不多说直接上图！"><a href="#嘿嘿，脑子有坑的我突然想起用canvas画个导航栏，然后进行局部位置进行事件点击，然而过程略带难度，因此记录下啦。好哒，废话不多说直接上图！" class="headerlink" title="嘿嘿，脑子有坑的我突然想起用canvas画个导航栏，然后进行局部位置进行事件点击，然而过程略带难度，因此记录下啦。好哒，废话不多说直接上图！"></a>嘿嘿，脑子有坑的我突然想起用canvas画个导航栏，然后进行局部位置进行事件点击，然而过程略带难度，因此记录下啦。好哒，废话不多说直接上图！</h5><h4 id="第一步，我要画圆和矩形嘛，肯定有个画布啦："><a href="#第一步，我要画圆和矩形嘛，肯定有个画布啦：" class="headerlink" title="第一步，我要画圆和矩形嘛，肯定有个画布啦："></a>第一步，我要画圆和矩形嘛，肯定有个画布啦：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id=&apos;draw&apos; width=&quot;1000px&quot; height=&apos;900px&apos;   &gt;&lt;/canvas&gt;</div><div class="line">		&lt;script src=&quot;js/hanshu.js&quot;&gt;&lt;/script&gt;</div><div class="line">		&lt;script src=&quot;js/huayuan.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
 <h5 id="PS：值得注意的是：我是把里面的函数单独封装在一个文件里了，接着在另一个文件调用需要的函数，因此在引用的时候需要注意下顺序，先引用封装好的函数，再引用另一个文件。（这个方法是某位大佬告诉宝宝，这样比较有“装逼特效”，哈哈哈！）"><a href="#PS：值得注意的是：我是把里面的函数单独封装在一个文件里了，接着在另一个文件调用需要的函数，因此在引用的时候需要注意下顺序，先引用封装好的函数，再引用另一个文件。（这个方法是某位大佬告诉宝宝，这样比较有“装逼特效”，哈哈哈！）" class="headerlink" title="PS：值得注意的是：我是把里面的函数单独封装在一个文件里了，接着在另一个文件调用需要的函数，因此在引用的时候需要注意下顺序，先引用封装好的函数，再引用另一个文件。（这个方法是某位大佬告诉宝宝，这样比较有“装逼特效”，哈哈哈！）"></a>PS：值得注意的是：我是把里面的函数单独封装在一个文件里了，接着在另一个文件调用需要的函数，因此在引用的时候需要注意下顺序，先引用封装好的函数，再引用另一个文件。（这个方法是某位大佬告诉宝宝，这样比较有“装逼特效”，哈哈哈！）</h5><h5 id="第二步，封装函数"><a href="#第二步，封装函数" class="headerlink" title="第二步，封装函数"></a>第二步，封装函数</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawArc</span>(<span class="params">parms</span>)</span>&#123;   <span class="comment">//因为需要画四个圆图片，所以需要封装一下</span></div><div class="line">	<span class="keyword">var</span> x = parms.x || <span class="number">0</span>,</div><div class="line">		y = parms.y || <span class="number">0</span>,</div><div class="line">		width = parms.width || <span class="number">0</span>,</div><div class="line">		height = parms.height || <span class="number">0</span>,</div><div class="line">		r = parms.r || <span class="number">0</span>,</div><div class="line">		color = parms.color || <span class="string">'#f27c24'</span>,</div><div class="line">		imgSrc = parms.src || <span class="string">'img/1.png'</span>;</div><div class="line"></div><div class="line">	<span class="keyword">var</span> img = <span class="keyword">new</span> Image();</div><div class="line">	img.src = imgSrc;</div><div class="line">	img.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		con.drawImage(img, x, y,width ,height);</div><div class="line">		<span class="keyword">var</span> pattern=con.createPattern(img,<span class="string">"no-repeat"</span>);</div><div class="line">		con.fillStyle=pattern;</div><div class="line">		con.fill();</div><div class="line">		con.closePath();</div><div class="line">		con.restore();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawLine</span>(<span class="params">line</span>)</span>&#123;    <span class="comment">//这是画矩形</span></div><div class="line">     <span class="keyword">var</span> x = line.x || <span class="number">0</span>,</div><div class="line">     	 y = line.y || <span class="number">0</span>,</div><div class="line">    	 z = line.z || <span class="number">0</span>,</div><div class="line">     	 q = line.q || <span class="number">0</span>,</div><div class="line">     color = line.color || (<span class="string">'#f27c24'</span>),</div><div class="line">     linewidth = line.linewidth || <span class="number">5</span></div><div class="line">		con.moveTo(x,y);</div><div class="line">		con.lineTo(z,q);</div><div class="line">		con.strokeStyle = color;</div><div class="line">		con.stroke();</div><div class="line">		con.linewidth = linewidth;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h5 id="PS-因为脑子有坑的想法，所以画了个矩形"><a href="#PS-因为脑子有坑的想法，所以画了个矩形" class="headerlink" title="PS:因为脑子有坑的想法，所以画了个矩形"></a>PS:因为脑子有坑的想法，所以画了个矩形</h5><h4 id="第三步：调用函数"><a href="#第三步：调用函数" class="headerlink" title="第三步：调用函数"></a>第三步：调用函数</h4><h5 id="这里，我将每组数据都写好放在数组里，接着在用for循环一下，直接调用，这样就不用重复没必要重复的代码了，嘻嘻"><a href="#这里，我将每组数据都写好放在数组里，接着在用for循环一下，直接调用，这样就不用重复没必要重复的代码了，嘻嘻" class="headerlink" title="这里，我将每组数据都写好放在数组里，接着在用for循环一下，直接调用，这样就不用重复没必要重复的代码了，嘻嘻"></a>这里，我将每组数据都写好放在数组里，接着在用for循环一下，直接调用，这样就不用重复没必要重复的代码了，嘻嘻</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var canvas = document.getElementById(&quot;draw&quot;),con = canvas.getContext(&quot;2d&quot;);</div><div class="line"></div><div class="line">var arrsrc = [</div><div class="line">    &#123;x: 200,y: 120,width: 150,height: 150&#125;,</div><div class="line">    &#123;x: 800,y: 120,width: 180,height: 150,src:&apos;img/2.png&apos;&#125;,</div><div class="line">    &#123;x: 200,y: 520,width: 180,height: 150,src:&apos;img/3.png&apos;&#125;,</div><div class="line">    &#123;x: 780,y: 520,width: 180,height: 180,src:&apos;img/4.png&apos;&#125;</div><div class="line">]</div><div class="line"></div><div class="line">var linesrc = [</div><div class="line">	&#123;x: 320,y: 600,z: 820,q: 600&#125;,</div><div class="line">	&#123;x: 320,y: 200,z: 820,q: 200&#125;,</div><div class="line">	&#123;x: 280,y: 200,z: 280,q: 600&#125;,</div><div class="line">	&#123;x: 880,y: 200,z: 880,q: 600&#125;</div><div class="line">]</div><div class="line"></div><div class="line">for (var i = 0; i &lt; 4; i++) &#123;</div><div class="line">	drawArc(arrsrc[i]);</div><div class="line">	drawLine(linesrc[i]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -371,408 +370,82 @@
 <p>#####PS：在这里要顺便提醒下各位，现在谷歌浏览器已经全面停用window.open()这个方法了，所以我为了避免出现打不开页面的尴尬现象，改用了window.localtion.href 这个方法。</p>
 <p>#####其实并不建议大家用canvas做这样的导航栏，毕竟降低开发效率，而且可能给后台带来不必要的麻烦，但这是我自己给爱宠做的一个小网站，同时也给自己练练手，所以我开心我乐意，略略略~~~</p>
 
-          
-        
       
     </div>
 
     <div>
       
+        
+
+      
     </div>
 
     <div>
       
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="/2017/03/07/ASP-NET/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Sandy Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Sandy Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/07/ASP-NET/" itemprop="url">
-                  项目一 认识ASP.NET
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-07T22:44:07+08:00">
-                2017-03-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ASP-NET/" itemprop="url" rel="index">
-                    <span itemprop="name">ASP.NET</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/07/ASP-NET/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/07/ASP-NET/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>小女子不才，还希望多多支持与鼓励，一分鼓励一毛关爱！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weqcode.png" alt=" WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
       
-      
-
-      
-        
-          
-            <a id="more"></a>
-<h3 id="ASP-NET"><a href="#ASP-NET" class="headerlink" title="ASP.NET"></a>ASP.NET</h3><p>Page.IsPostBack属性</p>
-<p>作用：IsPostBack属性用于检测页面是否已经回传给服务器端。<br>对于每次页面加载是都需要被初始化的控件，可以将其代码放在IsPostBack中，对于只需要加载一次的控件，可以将其代码放（！IsPostBack）中。</p>
-<p><strong><em>小栗子：</em></strong></p>
-<pre><code class="javascript">
-protected <span class="keyword">void</span> Page_Load(object sender, EventArgs e)
-   {
-       <span class="keyword">if</span> (!Page.IsPostBack) {
-           <span class="comment">//创建items集合</span>
-           ArrayList items = <span class="keyword">new</span> ArrayList();<span class="comment">//如果不引用using System.Collections;会报错</span>
-           items.Add(<span class="string">"苹果"</span>);
-           items.Add(<span class="string">"香蕉"</span>);
-           <span class="comment">//绑定到DropDownList，数据绑定，这两个语句不可缺一</span>
-           DropDownList1.DataSource = items;
-           DropDownList1.DataBind();
-       }
-   }
-</code></pre>
-<pre><code class="javascript">
-&lt;form id=<span class="string">"form1"</span> runat=<span class="string">"server"</span>&gt;
-        &lt;div&gt;
-   &lt;asp:DropDownList ID="DropDownList1" runat="server"&gt;
-       &lt;/asp:DropDownList&gt;
-       &lt;asp:Button ID="Button1" runat="server" Text="Button" /&gt;
-   &lt;/div&gt;
-       &lt;asp:Label ID="Label1" runat="server" Text="Label"&gt;&lt;/asp:Label&gt;
-   &lt;/form&gt;
-</code></pre>
-<p>在该控件属性中的AutoPostBack=true为自动回复；</p>
-<pre><code class="javascript">
-&lt;asp:DropDownList ID=<span class="string">"DropDownList1"</span> runat=<span class="string">"server"</span>&gt;
-       &lt;/asp:DropDownList&gt;
-</code></pre>
-
-          
-        
       
     </div>
+  </div>
 
-    <div>
-      
-    </div>
 
-    <div>
       
     </div>
 
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="/2017/02/20/jinRong/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Sandy Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Sandy Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/20/jinRong/" itemprop="url">
-                  国际金融
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-20T13:02:40+08:00">
-                2017-02-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/国际金融/" itemprop="url" rel="index">
-                    <span itemprop="name">国际金融</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/canvas/" rel="tag"># -"canvas"</a>
           
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/20/jinRong/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/20/jinRong/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
         
-          
-            <a id="more"></a>
-<h3 id="第一节．-货币"><a href="#第一节．-货币" class="headerlink" title="第一节．  货币"></a>第一节．  货币</h3><p>货币起源：贝壳，因此与钱有关的文字都是贝字旁；</p>
-<p>货币流通：执行流通手段职能的货币必要量<br>货币流通速度：<br>V=QP/M<br>M=QP/V，M为实际货币发行量；<br>M=待销售商品数量（Q）*单位商品价格（P）/同名货币流通次数（V）</p>
-<p>银行分类：</p>
-<ol>
-<li>一类：国家性 中央银行</li>
-<li>二类：政策性 农业银行，开发银行，进出口银行，不以盈利为目的</li>
-<li>三类：商业性 全国性国有，全国性股份制，区域性，地域性，地方性</li>
-</ol>
-<p>金融界老大：bank-bank<br>我国把办理与银行有关的大金融机构称为银行：</p>
-<ol>
-<li>1897年.5.27 中国通商银行</li>
-<li>1950：“户部银行”-“大清银行”-“中国银行”（1911）<br>3.1694：英格兰银行标志西方现代</li>
-</ol>
-<p>货币缺点：银行制度的建立</p>
-<p>银行危机的原因：商业银行的支付困难
- </p>
-<h3 id="第二节．-外汇"><a href="#第二节．-外汇" class="headerlink" title="第二节．  外汇"></a>第二节．  外汇</h3><p>1．  国家的贬值利于商品的出口<br>2．  国家 符号  ISO代号<br>美    US    USD<br>日    ￥    JPY<br>加    Can   CAD<br>英    €    GBP<br>新    S$    SGD<br>瑞    SF    CHF<br>欧盟  €    EUR<br>澳    $A    AUD</p>
-<p>外汇分为：狭义和广义<br>信用工具：汇票，本票，支票<br>外汇定义：</p>
-<ol>
-<li>外汇具有静态和动态</li>
-<li>国际信用工具</li>
-<li>两个前提条件（自由兑换，普遍接受）</li>
-<li>国际汇兑：不直接利用现金，而利用支票，汇票；信汇与电汇等信用工具，已委托付款或转让债权的方式来结算国际之间债权</li>
-<li>美元是国际货币<br>外汇的一般形式：以外币表示的国外资产<br>外汇的基本形式：本国在外国通汇银行的活期存款<br>外汇的基本职能：充当国际结算的支付手段<br>最本质的特点：可自由兑换性</li>
-</ol>
-<p>外汇种类：<br>自由外汇：三项义务，自由的多边的国际结算制度<br>IMF（国际货币基金组织）<br>外汇来源<br>{<br>贸易外汇：宣传，推销，保险<br>非外汇：与商品无关的都是非贸易<br>}</p>
-<p>外汇买卖交割期限<br> 即外汇：满足临时性支付需要；调整币种结构；投机</p>
-<p>对国际收支概念理解：</p>
-<ol>
-<li>国际收支是一个流量的概念<br>流量是指一定时期内发生变动的变量数值<br>存量是指一定时点上存在的变量数值</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/07/ASP-NET/" rel="next" title="项目一 认识ASP.NET">
+                <i class="fa fa-chevron-left"></i> 项目一 认识ASP.NET
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -780,6 +453,14 @@ protected <span class="keyword">void</span> Page_Load(object sender, EventArgs e
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/04/07/javascript/"
+           data-title="javascript" data-url="/2017/04/07/javascript/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -799,8 +480,17 @@ protected <span class="keyword">void</span> Page_Load(object sender, EventArgs e
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -872,6 +562,22 @@ protected <span class="keyword">void</span> Page_Load(object sender, EventArgs e
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于如何运用canvas进行局部事件绑定"><span class="nav-number">1.</span> <span class="nav-text">关于如何运用canvas进行局部事件绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#嘿嘿，脑子有坑的我突然想起用canvas画个导航栏，然后进行局部位置进行事件点击，然而过程略带难度，因此记录下啦。好哒，废话不多说直接上图！"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">嘿嘿，脑子有坑的我突然想起用canvas画个导航栏，然后进行局部位置进行事件点击，然而过程略带难度，因此记录下啦。好哒，废话不多说直接上图！</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第一步，我要画圆和矩形嘛，肯定有个画布啦："><span class="nav-number">1.0.1.</span> <span class="nav-text">第一步，我要画圆和矩形嘛，肯定有个画布啦：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#PS：值得注意的是：我是把里面的函数单独封装在一个文件里了，接着在另一个文件调用需要的函数，因此在引用的时候需要注意下顺序，先引用封装好的函数，再引用另一个文件。（这个方法是某位大佬告诉宝宝，这样比较有“装逼特效”，哈哈哈！）"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">PS：值得注意的是：我是把里面的函数单独封装在一个文件里了，接着在另一个文件调用需要的函数，因此在引用的时候需要注意下顺序，先引用封装好的函数，再引用另一个文件。（这个方法是某位大佬告诉宝宝，这样比较有“装逼特效”，哈哈哈！）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第二步，封装函数"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">第二步，封装函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PS-因为脑子有坑的想法，所以画了个矩形"><span class="nav-number">1.0.1.3.</span> <span class="nav-text">PS:因为脑子有坑的想法，所以画了个矩形</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三步：调用函数"><span class="nav-number">1.0.2.</span> <span class="nav-text">第三步：调用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#这里，我将每组数据都写好放在数组里，接着在用for循环一下，直接调用，这样就不用重复没必要重复的代码了，嘻嘻"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">这里，我将每组数据都写好放在数组里，接着在用for循环一下，直接调用，这样就不用重复没必要重复的代码了，嘻嘻</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#画面如图："><span class="nav-number">1.0.2.2.</span> <span class="nav-text">画面如图：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四步，重点来啦！绑定事件："><span class="nav-number">1.0.3.</span> <span class="nav-text">第四步，重点来啦！绑定事件：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#因为有四个圆，并且位置不一样，每个圆点击就会跳转不同的新页面，从而实现相当于导航栏的功能。然而canvas只能有一个事件，那么问题来了，难道我点击任何一个地方都只能跳转到一个页面吗？当然不能这样，这样的话有什么意义哦。所以，在这里我给画布的点击事件进行了个位置判断。"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">* 因为有四个圆，并且位置不一样，每个圆点击就会跳转不同的新页面，从而实现相当于导航栏的功能。然而canvas只能有一个事件，那么问题来了，难道我点击任何一个地方都只能跳转到一个页面吗？当然不能这样，这样的话有什么意义哦。所以，在这里我给画布的点击事件进行了个位置判断。</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
@@ -980,6 +686,10 @@ protected <span class="keyword">void</span> Page_Load(object sender, EventArgs e
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
